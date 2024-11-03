@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../tailwind"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "training"
+	}
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ez aot n 1</title>
+</head>
+<body class=" bg-violet-300 min-h-full flex flex-col gap-24 ">
+    <!-- navbar -->
+    <div class="bg-violet-500 max-h-22 py-2 ">
+        <div class=" flex justify-around items-center ">
+            <div class="box-border">
+                <img src="img/Task.png" alt="logo" class="h-auto w-36">
+            </div>
+            <button onclick="toggleForm()" class=" bg-violet-950 text-white border-solid border-2 rounded-full border-violet-950  px-6 h-11 ">Add Task</button>
+        </div>
+    </div>
+    
+    <!-- task column -->
+    <div class="flex flex-wrap  mb-1.5 justify-evenly item-center ">
+        <div class="bg-violet-500 h-96 w-80 rounded-xl shadow-2xl overflow-y-auto mb-1.5">
+            <div class="p-3 bg-violet-950 h-13 flex rounded-t-xl">
+                <span class="bg-red-600 h-3 w-3 rounded-full m-1.5"></span>
+                <h2 class=" text-white">To do <span id="todoCounter">0</span></h2>
+            </div>
+                <ul class="todo"></ul>
+
+        </div>
+        <div class="bg-violet-500 h-96 w-80 rounded-xl shadow-2xl overflow-y-auto mb-1.5">
+            <div>
+                <div class="p-3 bg-violet-950 h-13 flex rounded-t-xl">
+                    <span class="bg-orange-500 h-3 w-3 rounded-full m-1.5"></span>
+                    <h2 class=" text-white">Doing <span id="doingCounter">0</span></h2>
+                </div>
+            </div>
+                <ul class="doing"></ul>
+         
+        </div>
+        <div class="bg-violet-500 h-96 w-80 rounded-xl shadow-2xl overflow-y-auto mb-1.5">
+            <div>
+                <div class="p-3 bg-violet-950 h-13 flex rounded-t-xl">
+                    <span class="bg-green-600 h-3 w-3 rounded-full m-1.5"></span>
+                    <h2 class=" text-white">Done <span id="doneCounter">0</span></h2>
+                </div>
+            </div>
+                <ul class="done"></ul>
+          
+        </div>
+    </div>
+
+    <!-- add task -->
+    <div id="list-add" class="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-60 flex justify-center items-center hidden ">
+        <div class="bg-purple-200 h-[500px] w-96 rounded-xl flex justify-center py-6">
+            <!-- <button id="close" type="button" >x</button> -->
+            <form class=" flex flex-col justify-around w-72">
+                <input id="title" type="text" placeholder="Enter the title" required>
+                <input id="date" type="date" required>
+                 
+                <select id="list" class="border-2 rounded p-2" required>
+                    <option value="" disabled selected hidden>Select a status</option>
+                    <option value="To do">To do</option>
+                    <option value="Doing">Doing</option>
+                    <option value="Done">Done</option>
+                </select>
+
+               <select id="select" class="border-2 rounded p-2" required>
+                    <option value="" disabled selected hidden>Select a priority</option>
+                    <option value="p1">P1</option>
+                    <option value="p2">P2</option>
+                    <option value="p3">P3</option>
+                </select>
+                <textarea id="description" maxlength="200" class="resize-none h-28" placeholder="Enter your description" required></textarea>
+                <button id="submet" type="button" class=" bg-violet-950 text-white border-solid border-2 rounded-full border-violet-950 h-11 justify-end">Submit</button>
+                <button id="update" type="button" class=" bg-violet-950 text-white border-solid border-2 rounded-full border-violet-950 h-11 justify-end hidden">Update</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="d.js"></script>
+</html>
